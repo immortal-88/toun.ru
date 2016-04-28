@@ -5,30 +5,27 @@
 			<nav>
 			
 				<ul class="fe-nav fe-col-m-only" id="menu">
-				
-					<li id="category-button">  <p> <span class="menu_main-span"> О доме        </span>   <br /> <span class="menu_sub-span"> ёнгын кол       </span>       </p> </li>
-					<li> <p> <a href="index.html"> <span class="menu_main-span"> Афиша         </span>   <br /> <span class="menu_sub-span"> ляххал          </span> </a> </p> </li>
-					<li> <p> <a href="index.html"> <span class="menu_main-span"> Новые дела    </span>   <br /> <span class="menu_sub-span"> лильпи вāрмальт </span> </a> </p> </li>
-					<li> <p> <a href="index.html"> <span class="menu_main-span"> Хозяева       </span>   <br /> <span class="menu_sub-span"> театрын мирт    </span> </a> </p> </li>
-					<li> <p> <a href="index.html"> <span class="menu_main-span"> Мтровоззрение </span>   <br /> <span class="menu_sub-span"> мир мӯтра       </span> </a> </p> </li>
-					<li> <p> <a href="index.html"> <span class="menu_main-span"> Библеотека    </span>   <br /> <span class="menu_sub-span"> ёнгын           </span> </a> </p> </li>
-					<li> <p> <a href="index.html"> <span class="menu_main-span"> Контакты      </span>   <br /> <span class="menu_sub-span"> рупитан мāнанл  </span> </a> </p> </li>
-					<li id="menu_last-element"> <p> <a href="index.html"> <span class="menu_main-span"> Билеты  </a> </li>
-					
+
+                    <li id="category-button" ng-repeat="item in menu">
+  <p>
+  <span class="menu_main-span"> {{ item.item.link_title }} </span>   <br /> 
+  <span class="menu_sub-span"> {{ item.item.title }}  </span>
+  </p>
+  					</li>
+	
 				</ul>
 				
 				
 				<ul class="fe-none" id="menu-small">
-				
-					<li> <p> <a href="index.html"> <span class="menu_main-span"> О доме        </span>   <br /> <span class="menu_sub-span"> ёнгын кол       </span> </a> </p> </li>
-					<li> <p> <a href="index.html"> <span class="menu_main-span"> Афиша         </span>   <br /> <span class="menu_sub-span"> ляххал          </span> </a> </p> </li>
-					<li> <p> <a href="index.html"> <span class="menu_main-span"> Новые дела    </span>   <br /> <span class="menu_sub-span"> лильпи вāрмальт </span> </a> </p> </li>
-					<li> <p> <a href="index.html"> <span class="menu_main-span"> Хозяева       </span>   <br /> <span class="menu_sub-span"> театрын мирт    </span> </a> </p> </li>
-					<li> <p> <a href="index.html"> <span class="menu_main-span"> Мтровоззрение </span>   <br /> <span class="menu_sub-span"> мир мӯтра       </span> </a> </p> </li>
-					<li> <p> <a href="index.html"> <span class="menu_main-span"> Библеотека    </span>   <br /> <span class="menu_sub-span"> ёнгын           </span> </a> </p> </li>
-					<li> <p> <a href="index.html"> <span class="menu_main-span"> Контакты      </span>   <br /> <span class="menu_sub-span"> рупитан мāнанл  </span> </a> </p> </li>
-					<li id="menu_last-element"> <p> <a href="#"> <span class="menu_main-span"> Билеты  </a> </li>
-					
+
+
+                    <li id="category-button" ng-repeat="item in menu">
+  <p>
+  <span class="menu_main-span"> {{ item.item.link_title }} </span>   <br /> 
+  <span class="menu_sub-span"> {{ item.item.title }}  </span>
+  </p>
+  					</li>
+
 				</ul>
 			
 				

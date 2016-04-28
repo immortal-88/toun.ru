@@ -185,6 +185,7 @@ function fe_init () {
 		
 	}
 	
+	/*
 	
 	var categoryButton = fe.g("i","category-button");
 	var category       = fe.g("i","category");
@@ -203,6 +204,8 @@ function fe_init () {
 		 fe.close( fe.g("i","category"));
 			
 	});
+
+	*/
 	
 	
 	headerLogo.addEventListener("mouseover",function()
