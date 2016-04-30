@@ -5,42 +5,51 @@
 taatrApp.controller("MainCtrl", function ($scope, ajax, localStorage) {
 
     $scope.page = 'views/main.html';
+
+    $scope.languages = [];
+    $scope.languages['en'] = 'field_lang_en';
+    $scope.languages['ru'] = 'field_lang_ru';
+    $scope.languages['mns'] = 'field_lang_mns';
+    $scope.languages['kh'] = 'field_lang_kh';
+
     $scope.language1 = 'ru';
     $scope.language2 = 'mns';    
-    $scope.menu = [];
 
+   $scope.getPage = function(json, nameOfPage) {
 
-   $scope.getMainManu = function(json) {
-
-    if ( localStorage.get('menu') ) {
-       $scope.menu = localStorage.get('menu'); 
-       console.log( $scope.menu );
+    if ( localStorage.get(nameOfPage) ) {
+       $scope[nameOfPage] = localStorage.get(nameOfPage); 
+       console.log( $scope[nameOfPage] );
        return '';
     }
-    ajax.post("/content/kh/go2json/menu/menu-json", function(data){ 
-        $scope.menu = [];
-        var incr = 0;       
-        for (var i in data) {
-            if (data.hasOwnProperty(i)) {
-                $scope.menu[incr] = {};    
-                $scope.menu[incr].item = data[i].link;               
-                if ( data[i].below.length != 0 ) {
-                    var subincr = 0;
-                    $scope.menu[incr].submemu = [];
-                    for (var pp in data[i].below) {
-                        if (data[i].below.hasOwnProperty(pp)) {
-            $scope.menu[incr].submemu[subincr] = data[i].below[pp].link;  
-            subincr++;  
-                        }
-                    }                   
-                }
-                incr++;
-            }
-        }
-        localStorage.set('menu', $scope.menu )
-        console.log( $scope.menu );
+
+    ajax.post(json, function(data){ 
+        $scope[nameOfPage] = data;
+        localStorage.set(nameOfPage, $scope[nameOfPage] )
      });
+
    };
-   $scope.getMainManu("/content/kh/go2json/menu/menu-json");
+
+   $scope.changelanguage = function(lang, langcase ){
+        
+        if( langcase == 1 ) {
+            $scope.language1 = lang;
+        }
+        if( langcase == 2 ) {
+            $scope.language2 = lang;
+        }
+        
+   };
+
+   $scope.replaceNtoBR = function(str){
+        var newstr = str.replace(/\\n/gi, '<br />');       
+        return newstr;
+   };
+
+   $scope.getPage("/content/ru/go2json/frontpage/1", 'mainPage');
+
+   $scope.test = function(item){
+        console.log( item );        
+   };
 
 });

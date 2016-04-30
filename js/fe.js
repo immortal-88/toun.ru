@@ -185,27 +185,10 @@ function fe_init () {
 		
 	}
 	
-	/*
-	
-	var categoryButton = fe.g("i","category-button");
-	var category       = fe.g("i","category");
-	
-	categoryButton.addEventListener("mousemove",function()
-	{
-			
-		 fe.open( fe.g("i","category"));
-			
-	});
 	
 	
-	category.addEventListener("mouseleave",function()
-	{
-			
-		 fe.close( fe.g("i","category"));
-			
-	});
+	// menu 
 
-	*/
 	
 	
 	headerLogo.addEventListener("mouseover",function()

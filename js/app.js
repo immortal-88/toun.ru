@@ -1,5 +1,5 @@
 
-var taatrApp = angular.module("TaatrApp", []); 
+var taatrApp = angular.module("TaatrApp", ['ngSanitize']); 
 
 
 

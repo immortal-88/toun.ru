@@ -6,42 +6,69 @@
 			
 				<ul class="fe-nav fe-col-m-only" id="menu">
 
-                    <li id="category-button" ng-repeat="item in menu">
+<data-repeat ng-repeat-start="item in mainPage['menu']" >
+</data-repeat>
+                <li data-field_link="{{item['field_link']['und'][0]['value']}}"
+                id="{{ $first ? 'category-button' : 
+                ( $last ? 'menu_last-element' : 'none' )
+                }}"
+                >
   <p>
-  <span class="menu_main-span"> {{ item.item.link_title }} </span>   <br /> 
-  <span class="menu_sub-span"> {{ item.item.title }}  </span>
+  <span class="menu_main-span"> 
+  {{ item[languages[language1]]['und'][0]['value'] }} </span>   <br /> 
+  <span class="menu_sub-span"> 
+  {{ item[languages[language2]]['und'][0]['value'] }}  </span>
   </p>
-  					</li>
-	
+  				</li>
+  	<data-submenu	ng-if="item['children']" >
+
+<data-repeat-submenu ng-repeat-start="subitem in item['children']" >
+</data-repeat-submenu>
+  		<li class="fe-none category-small" 
+                      > 
+  	<a href="#"> {{ subitem[languages[language1]]['und'][0]['value']}}      
+  		</a> </li>
+<data-repeat-submenu  ng-repeat-end >
+</data-repeat-submenu>
+
+  	</data-submenu>
+
+<data-repeat  ng-repeat-end >
+</data-repeat>
 				</ul>
 				
 				
 				<ul class="fe-none" id="menu-small">
 
-
-                    <li id="category-button" ng-repeat="item in menu">
+<data-repeat ng-repeat-start="item in mainPage['menu']" >
+</data-repeat>
+                <li data-field_link="{{item['field_link']['und'][0]['value']}}"
+                id="{{ $first ? 'category-button' : 
+                ( $last ? 'menu_last-element' : 'none' )
+                }}"
+                     >
   <p>
-  <span class="menu_main-span"> {{ item.item.link_title }} </span>   <br /> 
-  <span class="menu_sub-span"> {{ item.item.title }}  </span>
+  <span class="menu_main-span"> 
+  {{ item[languages[language1]]['und'][0]['value'] }} </span>   <br /> 
+  <span class="menu_sub-span"> 
+  {{ item[languages[language2]]['und'][0]['value'] }}  </span>
   </p>
-  					</li>
+  				</li>
+  	<data-submenu	ng-if="item['children']" >
 
-				</ul>
-			
-				
-					<ul id="category" class="fe-none">
-					
-						<li> <a href="index.html"> История       </a> </li>
-						<li> <a href="index.html"> Новости       </a> </li>
-						<li> <a href="index.html"> Сцена         </a> </li>
-						<li> <a href="index.html"> Документы     </a> </li>
-						<li> <a href="index.html"> Пресса        </a> </li>
-						<li> <a href="index.html"> Награды       </a> </li>
-						<li> <a href="index.html"> Партнеры      </a> </li>
-						<li> <a href="index.html"> Вакансии      </a> </li>
-						<li> <a href="index.html"> Книга отзывов </a> </li>
-					
-					</ul>
-				
+<data-repeat-submenu ng-repeat-start="subitem in item['children']" >
+</data-repeat-submenu>
+  		<li class="fe-none category-small"> 
+  	<a href="#"> {{ subitem[languages[language1]]['und'][0]['value']}}      
+  		</a> </li>
+<data-repeat-submenu  ng-repeat-end >
+</data-repeat-submenu>
+
+  	</data-submenu>
+
+<data-repeat  ng-repeat-end >
+</data-repeat>
+
+				</ul>			
 			
 			</nav>

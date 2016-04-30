@@ -8,10 +8,11 @@
 				
 					<div class="fe-col-3 fe-col-m-only">
 					
-						<div id="header_left">
-						
+						<div id="header_left" >
+<p ng-bind-html="replaceNtoBR(mainPage['settings']['adress_head'])"></p>
+						<!--  
 							Ханты-Мансийск <br / > Мира 14 а, <br /> Дом Дужбы народов 
-							
+						-->	
 							<p id="header_left_scheme"> Схема проезда <img src="icon/img/location.png" alt="icon" style="position: relative; top: 4px; left: 8px;" /> </p>
 						
 						</div>
@@ -22,7 +23,8 @@
 					
 						<div id="header_center">
 						
-							<p id="header_center_title" class="fe-col-m-only"> ДЕПАРТАМЕНТ КУЛЬТУРЫ ХАНТЫ-МАНСИЙСКОГО АВТОНОМОГО ОКРУГА-ЮГРЫ </p>
+							<p id="header_center_title" class="fe-col-m-only"> 
+{{ mainPage['settings']['site_slogan']}}  </p>
 							
 							<div id="header_center_logo"> <a href="index.html"> <img src="icon/img/logo.jpg"> </a> </div>
 						
@@ -36,15 +38,27 @@
 						
 							<p id="header_right_cecutient"> <a href="#"> Слабовидящим  <img src="icon/img/glasses.png" alt="icon" style="position: relative; top: 5px;" /> </a> </p>
 						
-							
-							 +7(3467) 33-54-61<br />+7(3467) 33-54-61
+{{ mainPage['settings']['phone_first'] }}<br />
+{{ mainPage['settings']['phone_second'] }}
 							 
 							 <div id="language">
 							 
-								 <a href="index.html"> <div class="language_element active-language"> РУС </div> </a>
-								 <a href="index.html"> <div class="language_element"> ENG </div> </a>
-								 <a href="index.html"> <div class="language_element"> Хнт </div> </a>
-								 <a href="index.html"> <div class="language_element active-language"> Мнс </div> </a>
+								 <a href="#"> <div 								 
+								 ng-click="changelanguage('ru', 1)"
+								 class="{{ language1 == 'ru' ? 'language_element active-language': 'language_element' }}" > 
+								 РУС </div> </a>
+								 <a href="#"> <div 								 
+								 ng-click="changelanguage('en', 1)"
+								 class="{{ language1 == 'en' ? 'language_element active-language': 'language_element' }}"> 
+								 ENG </div> </a>
+								 <a href="#"> <div 
+								 ng-click="changelanguage('kh', 2)"
+								 class="{{ language2 == 'kh' ? 'language_element active-language': 'language_element' }}"> 
+								 Хнт </div> </a>
+								 <a href="#"> <div 
+								 ng-click="changelanguage('mns', 2)"
+								 class="{{ language2 == 'mns' ? 'language_element active-language': 'language_element' }}"> 
+								 Мнс </div> </a>
 							 
 							 </div>
  						
