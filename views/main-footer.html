@@ -9,13 +9,19 @@
 				 
 					 <div class="fe-col-u-4 fe-col-b-4 fe-col-m-4 fe-col-s-6 fe-text-center"> 
 
-					     <div id="footer_address"> ул. Мира 14 а,  Дом Дружбы народов <br /> mail@toun.ru </div>
+					     <div id="footer_address"> 
+{{ mainPage['footer'][languages[language1]]['adress_footer'] }}				 <br /> 
+{{ mainPage['footer']['mail'] }} </div>
 		
 					 </div>
 					 
 					 <div class="fe-col-u-4 fe-col-b-4 fe-col-m-4 fe-col-s-6 fe-text-center"> 
 
-					     <div id="footer_phone"> +7(3467) 33-54-61 &nbsp +7(3467) 85-25-61 </div>
+					     <div id="footer_phone">
+					      {{ mainPage['settings']['phone_first'] }}
+					      &nbsp 
+					     {{ mainPage['settings']['phone_second'] }}
+					     </div>
 					 
 					 </div>
 					 

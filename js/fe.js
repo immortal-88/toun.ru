@@ -190,7 +190,7 @@ function fe_init () {
 	// menu 
 
 	
-	
+	/*---	
 	headerLogo.addEventListener("mouseover",function()
 	{
 			
@@ -198,7 +198,7 @@ function fe_init () {
 			
 	});
 	
-	/*---*/
+	
 	
 	var smallMenuButtton = fe.g("i","small-menu-buttton"); 
 	
@@ -209,7 +209,7 @@ function fe_init () {
 			
 	});
 	
-	/*---*/
+	---*/
 	
 	var headerLogoImage = fe.g("i","header_logo_image");
 	

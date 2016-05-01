@@ -9,11 +9,11 @@
 					<div class="fe-col-3 fe-col-m-only">
 					
 						<div id="header_left" >
-<p ng-bind-html="replaceNtoBR(mainPage['settings']['adress_head'])"></p>
-						<!--  
-							Ханты-Мансийск <br / > Мира 14 а, <br /> Дом Дужбы народов 
-						-->	
-							<p id="header_left_scheme"> Схема проезда <img src="icon/img/location.png" alt="icon" style="position: relative; top: 4px; left: 8px;" /> </p>
+<p ng-bind-html="replaceNtoBR(mainPage['header'][languages[language1]]['adress_head'])"></p>
+
+							<p id="header_left_scheme">
+{{ mainPage['header'][languages[language1]]['title_map'] }}
+							 <img src="icon/img/location.png" alt="icon" style="position: relative; top: 4px; left: 8px;" /> </p>
 						
 						</div>
 					
@@ -24,9 +24,9 @@
 						<div id="header_center">
 						
 							<p id="header_center_title" class="fe-col-m-only"> 
-{{ mainPage['settings']['site_slogan']}}  </p>
+{{ mainPage['header'][languages[language1]]['slogan_top'] | uppercase}}  </p>
 							
-							<div id="header_center_logo"> <a href="index.html"> <img src="icon/img/logo.jpg"> </a> </div>
+							<div id="header_center_logo"> <a href="index.html"> <img src="/content/storage/logo.png"> </a> </div>
 						
 						</div>
 					
@@ -36,7 +36,9 @@
 					
 						<div id="header_right">
 						
-							<p id="header_right_cecutient"> <a href="#"> Слабовидящим  <img src="icon/img/glasses.png" alt="icon" style="position: relative; top: 5px;" /> </a> </p>
+							<p id="header_right_cecutient"> <a href="#"> 
+{{ mainPage['header'][languages[language1]]['eyesight'] | firstUpperCase }}
+<img src="icon/img/glasses.png" alt="icon" style="position: relative; top: 5px;" /> </a> </p>
 						
 {{ mainPage['settings']['phone_first'] }}<br />
 {{ mainPage['settings']['phone_second'] }}

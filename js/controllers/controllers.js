@@ -42,8 +42,47 @@ taatrApp.controller("MainCtrl", function ($scope, ajax, localStorage) {
    };
 
    $scope.replaceNtoBR = function(str){
-        var newstr = str.replace(/\\n/gi, '<br />');       
-        return newstr;
+        if( str ) {
+            var newstr = str.replace(/\\n/gi, '<br />');       
+            return newstr;
+        }
+        return '';
+   };
+
+   $scope.showMonth = function( obj, month ) {  
+        var bool = false;
+        if ( +month == 1) {
+            $scope.first_len = 0; 
+            for(var prs in obj)  { 
+                if(obj.hasOwnProperty(prs)) $scope.first_len++;
+            } 
+bool = $scope.first_len >= 1 ? true : false; 
+        }
+        if ( +month == 2) { 
+            $scope.second_len = 0; 
+            for(var prs in obj)  { 
+                if(obj.hasOwnProperty(prs)) $scope.second_len++;
+            } 
+bool = $scope.second_len >= 1 ? ( ($scope.first_len <= 11) ? 
+    true : false ) : false;
+
+        } 
+        return bool;
+
+   };
+
+   $scope.showItemMonth = function(index, month){
+        var bool = false;
+
+        if ( month == 1 ) {
+bool = index <= 11 ? true : false ;
+        }
+        if ( month == 2 ) {
+bool = index <= 11 ? ( ($scope.first_len <= 11) ? 
+    true : false ): false ;
+        }
+
+        return bool;        
    };
 
    $scope.getPage("/content/ru/go2json/frontpage/1", 'mainPage');

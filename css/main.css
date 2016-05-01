@@ -785,6 +785,13 @@ nav
 	
 }
 
+#wrapper_main_more {		
+	width: 460px;
+	
+	margin: auto;
+	
+	margin-bottom: 30px;
+}
 
 .main_more
 {
