@@ -2,7 +2,7 @@
 
 // services
 
-taatrApp.factory('ajax', function ($http) {
+customServices.factory('ajax', function ($http) {
     return {
         get: function(fileName, func) {
 

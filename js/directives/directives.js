@@ -2,7 +2,7 @@
 
 // directives
 
-taatrApp.directive('initFeJs', function () {
+customDirectives.directive('initFeJs', function () {
     return {
         restrict: 'A',        
         link: function (scope, element, attr) {

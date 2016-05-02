@@ -2,9 +2,7 @@
 
 // controllers
 
-taatrApp.controller("MainCtrl", function ($scope, ajax, localStorage) {
-
-    $scope.page = 'views/main.html';
+taatrApp.controller("MainCtrl", function ($scope, $location, ajax, localStorage) {
 
     $scope.languages = [];
     $scope.languages['en'] = 'field_lang_en';
@@ -13,7 +11,14 @@ taatrApp.controller("MainCtrl", function ($scope, ajax, localStorage) {
     $scope.languages['kh'] = 'field_lang_kh';
 
     $scope.language1 = 'ru';
-    $scope.language2 = 'mns';    
+    $scope.language2 = 'mns';   
+
+
+    $scope.routeGoToView = function (path) {
+        $location.path(path);
+        console.log( path );
+        
+    }
 
    $scope.getPage = function(json, nameOfPage) {
 
@@ -90,5 +95,19 @@ bool = index <= 11 ? ( ($scope.first_len <= 11) ?
    $scope.test = function(item){
         console.log( item );        
    };
+
+});
+
+taatrApp.controller("View1Ctrl", function ($scope, $location, ajax, localStorage) {
+
+        console.log( "View1Ctrl" );
+
+});
+
+
+
+taatrApp.controller("View2Ctrl", function ($scope, $location, ajax, localStorage) {
+
+        console.log( "View2Ctrl" );
 
 });
