@@ -2,9 +2,10 @@
 
 // directives
 
-customDirectives.directive('initFeJs', function () {
+customDirectives.directive('initFeJsDir', function () {
     return {
-        restrict: 'A',        
+        restrict: 'A', 
+        scope : false,       
         link: function (scope, element, attr) {
                 element.ready(function () {
         setTimeout(fe_init, 2000);         

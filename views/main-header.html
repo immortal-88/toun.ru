@@ -9,7 +9,7 @@
 					<div class="fe-col-3 fe-col-m-only">
 					
 						<div id="header_left" >
-<p ng-bind-html="replaceNtoBR(mainPage['header'][languages[language1]]['adress_head'])"></p>
+<p ng-bind-html="mainPage['header'][languages[language1]]['adress_head']  | replaceNtoBR"></p>
 
 							<p id="header_left_scheme">
 {{ mainPage['header'][languages[language1]]['title_map'] }}
@@ -26,7 +26,8 @@
 							<p id="header_center_title" class="fe-col-m-only"> 
 {{ mainPage['header'][languages[language1]]['slogan_top'] | uppercase}}  </p>
 							
-							<div id="header_center_logo"> <a href="index.html"> <img src="/content/storage/logo.png"> </a> </div>
+							<div id="header_center_logo"> <a href="index.html"> 
+<img src="{{ mainPage['header'][languages[language1]]['logo_horisontal'] }}"> </a> </div>
 						
 						</div>
 					

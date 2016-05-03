@@ -31,15 +31,27 @@ ng-if="showItemMonth( $index, 1 )"
 										 
 											 <div class="fe-row">
 											 
-												 <p class="fe-col-2" style="font-size: 14px;  text-align left;  padding-left: 20px;"> 1       </p>
-												 <p class="fe-col-4" style="font-size: 14px;  text-align left;"> вторник </p>
-												 <p class="fe-col-4" style="font-size: 14px;  text-align left;"> 0+      </p>  
+												 <p class="fe-col-2" style="font-size: 14px;  text-align left;  padding-left: 20px;"> 
+{{ item[languages[language1]]['item']['day'] }}       
+</p>
+												 <p class="fe-col-4" style="font-size: 14px;  text-align left;"> 
+{{ item[languages[language1]]['item']['day_week'] }} 
+												 </p>
+												 <p class="fe-col-4" style="font-size: 14px;  text-align left;"> 
+{{ item[languages[language1]]['item']['age'] }} 									   
+												  </p>  
 											 
 											 </div>
 											 
-											 <p class="main_event_elements_title"> <span class="title-big"> <a href="index.html"> Хипс-Випс </a> </span> <br /> <span class="title-small"> xxxxx </span> </p>
+											 <p class="main_event_elements_title"> <span class="title-big"> <a href="index.html"> 
+{{ item[languages[language1]]['item']['title'] }}
+											  </a> </span> <br /> <span class="title-small"> 
+{{ item[languages[language2]]['item']['title'] }}
+											   </span> </p>
 											 
-											 <p class="main_event_elements_about"> Спектакль для детей. В рамках фестиваля “Дух огня” </p>
+											 <p class="main_event_elements_about"> 
+{{ item[languages[language1]]['item']['body'] }}
+											 </p>
 											 
 										 
 										 </div>
@@ -50,17 +62,25 @@ ng-if="showItemMonth( $index, 1 )"
 											 
 												 <div class="fe-col-8">
 												 
-													 <p class="main_event_elements_time" > 10:00 </p> 
+													<p class="main_event_elements_time" >
+{{ item[languages[language1]]['item']['time'] }}
+													</p> 
 													 
-													 <p class="main_event_elements_status" > премьера </p> 
+													 <p class="main_event_elements_status" > 
+{{ item[languages[language1]]['item']['premier'] }}
+													 </p> 
 													 
-													 <p class="main_event_elements_address"> Дом Дружбы Народов Мира 14а  </p>
+													 <p class="main_event_elements_address"> 
+{{ item[languages[language1]]['item']['place'] }}
+													 </p>
 												 
 												 </div>
 												 
 												 <div class="fe-col-4">
 												 
-													 <a href="#"> <img src="icon/img/buy.png" alt="icon"> </a>
+<a href="#" ng-if="item[languages[language1]]['item']['buy_url']"> 
+<img src="icon/img/buy.png" alt="icon"> 
+</a>
 												 
 												 </div>
 											 
@@ -103,15 +123,27 @@ ng-if="showItemMonth( $index, 2 )"
 										 
 											 <div class="fe-row">
 											 
-												 <p class="fe-col-2" style="font-size: 14px;  text-align left;  padding-left: 20px;"> 1       </p>
-												 <p class="fe-col-4" style="font-size: 14px;  text-align left;"> вторник </p>
-												 <p class="fe-col-4" style="font-size: 14px;  text-align left;"> 0+      </p>  
+												 <p class="fe-col-2" style="font-size: 14px;  text-align left;  padding-left: 20px;"> 
+{{ item[languages[language1]]['item']['time'] }}
+											     </p>
+												 <p class="fe-col-4" style="font-size: 14px;  text-align left;">
+{{ item[languages[language1]]['item']['day_week'] }} 
+												  </p>
+												 <p class="fe-col-4" style="font-size: 14px;  text-align left;"> 
+{{ item[languages[language1]]['item']['age'] }} 
+												 </p>  
 											 
 											 </div>
 											 
-											 <p class="main_event_elements_title"> <span class="title-big"> <a href="index.html"> Хипс-Випс </a> </span> <br /> <span class="title-small"> xxxxx </span> </p>
+											 <p class="main_event_elements_title"> <span class="title-big"> <a href="index.html"> 
+{{ item[languages[language1]]['item']['title'] }}
+											 </a> </span> <br /> <span class="title-small"> 
+{{ item[languages[language2]]['item']['title'] }}
+											 </span> </p>
 											 
-											 <p class="main_event_elements_about"> Спектакль для детей. В рамках фестиваля “Дух огня” </p>
+											 <p class="main_event_elements_about"> 
+{{ item[languages[language1]]['item']['body'] }}
+											 </p>
 											 
 										 
 										 </div>
@@ -122,18 +154,26 @@ ng-if="showItemMonth( $index, 2 )"
 											 
 												 <div class="fe-col-8">
 												 
-													 <p class="main_event_elements_time" > 10:00 </p> 
+													 <p class="main_event_elements_time" >
+{{ item[languages[language1]]['item']['time'] }}
+													   </p> 
 													 
-													 <p class="main_event_elements_status" > премьера </p> 
+													 <p class="main_event_elements_status" > 
+{{ item[languages[language1]]['item']['time'] }}
+													 </p> 
 													 
-													 <p class="main_event_elements_address"> Дом Дружбы Народов Мира 14а  </p>
+													 <p class="main_event_elements_address"> 
+{{ item[languages[language1]]['item']['place'] }}
+													 </p>
 												 
 												 </div>
 												 
 												 <div class="fe-col-4">
 												 
-													 <a href="#"> <img src="icon/img/buy.png" alt="icon"> </a>
-												 
+<a href="#" ng-if="item[languages[language1]]['item']['buy_url']"> 
+<img src="icon/img/buy.png" alt="icon"> 
+</a>
+
 												 </div>
 											 
 											 </div>
@@ -153,7 +193,9 @@ ng-if="showItemMonth( $index, 2 )"
 
 						  <div id='wrapper_main_more' >
 
-							   <p class="main_more" style="margin-left: 20px;">  ПРОСМОТРЕТЬ ВСЮ АФИШУ  <img src="icon/img/event.png" style="position:relative; top: 8px;" /> </p>	
+							   <p class="main_more" style="margin-left: 20px;"> 
+
+							    ПРОСМОТРЕТЬ ВСЮ АФИШУ  <img src="icon/img/event.png" style="position:relative; top: 8px;" /> </p>	
 
 						  </div>
 
@@ -184,7 +226,11 @@ ng-repeat="item in mainPage['news']['widget']"
 										 
 											 <div class="fe-col-6">
 											 
-												 <div class="main_news_elements_image"> <img class="fe-img" src="img/image-3.jpg" alt="image" /> </div>
+												 <div class="main_news_elements_image"> 
+<img class="fe-img" 
+src="{{ item[languages[language1]]['item']['image']['src'] }}" 
+alt="image" /> 
+</div>
 											 
 											 </div>
 											 
@@ -215,7 +261,8 @@ ng-repeat="item in mainPage['news']['widget']"
 								  
 								 </ul>
 								 
-								  <p class="main_more" style="margin-left: 20px;"> ДРУГИЕ НОВОСТИ ТЕАТРА <img src="icon/img/news.png" style="position:relative; top: 8px;" /> </p>
+								  <p class="main_more" style="margin-left: 20px;"> 
+								  ДРУГИЕ НОВОСТИ ТЕАТРА <img src="icon/img/news.png" style="position:relative; top: 8px;" /> </p>
 						  
 						  </div>
 					
