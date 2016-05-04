@@ -86,7 +86,7 @@ ajaxService, localStorageService, languageService, pageService, routeService) {
 
 
    $scope.test = function(item){
-        console.log( '+++++++++++++++++' ); 
+        console.log( item ); 
         return item;       
    };
    $scope.debuger =  $location.path(); 

@@ -38,3 +38,12 @@ customFilters.filter("replaceNtoBR", function () {
         return '';
    };
 }); 
+
+
+customFilters.filter("changestartpath", function () {
+    return function (value, startpath) {
+        if (angular.isString(value)) {                                                         
+            return startpath+value;
+        }
+    };
+});
