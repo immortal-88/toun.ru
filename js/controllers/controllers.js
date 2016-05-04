@@ -2,8 +2,11 @@
 
 // controllers
 
-taatrApp.controller("MainCtrl", function ($scope, $location, 
+taatrApp.controller("AppCtrl", function ($scope, $location, $log,
  ajaxService, localStorageService, languageService, pageService, routeService) {
+
+                $log.debug( $location.url() );
+                $log.debug( $location.path() );  
 
    languageService.setup($scope, localStorageService);
 
@@ -53,21 +56,5 @@ bool = index <= 11 ? ( ($scope.first_len <= 11) ?
         console.log( item ); 
         return item;       
    };
-
-});
-
-taatrApp.controller("View1Ctrl", function ($scope, $location, 
- ajaxService, localStorageService, languageService, pageService, routeService) {
-
-        console.log( "View1Ctrl" );
-
-});
-
-
-
-taatrApp.controller("View2Ctrl", function ($scope, $location, 
- ajaxService, localStorageService, languageService, pageService, routeService) {
-
-        console.log( "View2Ctrl" );
 
 });

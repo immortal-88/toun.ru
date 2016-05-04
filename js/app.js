@@ -5,21 +5,17 @@ var customServices = angular.module("customServices", []);
 
 var taatrApp = angular.module("TaatrApp", 
 	["customServices", "customDirectives","customFilters", 
-	'ngRoute', 'ngSanitize'])
+	'ngRoute', 'ngSanitize',"oc.lazyLoad"])
 .config(function($routeProvider, $locationProvider) {
     $routeProvider.
       when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      }).
-      when('/view1', {
-        templateUrl: 'views/view1.html',
-        controller: 'View1Ctrl'
-      }).
-      when('/view2', {
-        templateUrl: 'views/view2.html',
-        controller: 'View2Ctrl'
-      }).
+        templateUrl: 'views/main/main.html',
+        controller: 'AppCtrl'
+      }).      
+      when('/perfomance', {
+        templateUrl: 'views/perfomance/perfomance.html',
+        controller: 'AppCtrl'
+      }).      
       otherwise({
         redirectTo: '/'
       });
