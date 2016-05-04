@@ -10,11 +10,11 @@ var taatrApp = angular.module("TaatrApp",
     $routeProvider.
       when('/', {
         templateUrl: 'views/main/main.html',
-        controller: 'AppCtrl'
+        controller: 'MainCtrl'
       }).      
       when('/perfomance', {
         templateUrl: 'views/perfomance/perfomance.html',
-        controller: 'AppCtrl'
+        controller: 'MainCtrl'
       }).      
       otherwise({
         redirectTo: '/'

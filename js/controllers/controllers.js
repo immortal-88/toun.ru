@@ -2,7 +2,7 @@
 
 // controllers
 
-taatrApp.controller("AppCtrl", function ($scope, $location, $log,
+taatrApp.controller("MainCtrl", function ($scope, $location, $log,
  ajaxService, localStorageService, languageService, pageService, routeService) {
 
                 $log.debug( $location.url() );
@@ -15,6 +15,7 @@ taatrApp.controller("AppCtrl", function ($scope, $location, $log,
    $scope.getPage = pageService.setup($scope, localStorageService, ajaxService);
 
    $scope.getPage("/content/ru/go2json/frontpage/1", 'mainPage');
+   $scope.getPage("/content/go2json/perfomance/25", 'perfomancePage');
 
    $scope.routeGoToView = routeService.setup();
  
