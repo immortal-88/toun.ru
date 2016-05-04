@@ -83,7 +83,7 @@ customServices.factory('pageService', function () {
                     console.log( scope[nameOfPage] );
                     return '';
                 }
-                    ajaxService.post(json, function(data){ 
+                ajaxService.post(json, function(data){ 
                     scope[nameOfPage] = data;
                     localStorageService.set(nameOfPage, scope[nameOfPage] );
                     console.log( scope[nameOfPage] );
@@ -101,7 +101,6 @@ customServices.factory('routeService', function ($location) {
         setup: function(){
             return function(path) {
                 $location.path(path);
-                console.log( path );
             }
         }
 

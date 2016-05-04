@@ -14,7 +14,11 @@ var taatrApp = angular.module("TaatrApp",
       }).      
       when('/perfomance', {
         templateUrl: 'views/perfomance/perfomance.html',
-        controller: 'MainCtrl'
+        controller: 'PerfomanceCtrl'
+      }).  
+      when('/test', {
+        templateUrl: 'views/view1.html',
+        controller: 'TestCtrl'
       }).      
       otherwise({
         redirectTo: '/'
