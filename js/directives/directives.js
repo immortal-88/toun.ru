@@ -22,11 +22,11 @@ customDirectives.directive('cssLazyLoad', function () {
         link: function (scope, element, attr) {
                 element.ready(function () {
 
-    var url = attr['url'];
+    var href = attr['href'];
 
     var link = document.createElement('link');
     link.rel = "stylesheet";
-    link.href = url;
+    link.href = href;
 
     var head = document.getElementsByTagName('head')[0];
     
