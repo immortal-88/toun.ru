@@ -84,10 +84,8 @@ customFilters.filter('fromtimestamp', function () {
 
             var y = date.getFullYear() ? date.getFullYear() : 2016;
             newdata += y ;
-
-            console.log( newdata );
                                 
             return newdata;            
         }
     };
-});;
+});

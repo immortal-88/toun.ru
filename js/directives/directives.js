@@ -37,3 +37,23 @@ customDirectives.directive('cssLazyLoad', function () {
         }
     }
 });
+
+
+customDirectives.directive('setAtrForMenuDir', function () {
+    return {
+        restrict: 'A', 
+        scope : false,       
+        link: function (scope, element, attr) {
+                element.ready(function () {
+
+    if ( attr['datamenuhref'] ) {
+        element.attr( 'datamenuhref', scope.itemofmenu );
+    }
+    if ( attr['datamenuid'] ) {
+        element.attr( 'id', scope.itemofmenu.slice(1) );
+    }
+    
+                });
+        }
+    }
+});

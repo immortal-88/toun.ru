@@ -3,6 +3,7 @@ var customFilters = angular.module("customFilters", []);
 var customDirectives = angular.module("customDirectives", []);
 var customServices = angular.module("customServices", []);
 
+
 var taatrApp = angular.module("TaatrApp", 
 	["customServices", "customDirectives","customFilters", 
 	'ngRoute', 'ngSanitize',"oc.lazyLoad"])

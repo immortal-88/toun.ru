@@ -12,7 +12,9 @@ $(document).ready(function() {
 
     $('.accordion-section-title').click(function(e) {
         // Grab current anchor value
-        var currentAttrValue = $(this).attr('href');
+        var currentAttrValue = $(this).attr('datamenuhref');
+        console.log( currentAttrValue );
+        
 
         if($(e.target).is('.active')) {
             close_accordion_section();
