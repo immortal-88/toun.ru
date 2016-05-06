@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+
+	<!-- 
+
+все стили здесь , с всех модулей
+
+	 -->
+
+
+	</head>
+	<body>
+
+<!--
+создать тег с  айди  для того что бы вставить модуль
+	<data-teg id='test'>
+		// here
+	</data-teg>
+-->		
+
+<script>
+
+var loader = {};
+
+loader.require = function (id, file) {
+
+    var xhr = new XMLHttpRequest();          
+    xhr.open("GET", file, false);  
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) { 
+            if (xhr.status == 200) { 
+                document.getElementById(id).innerHTML = xhr.responseText; 
+            }
+         }
+    };
+
+	xhr.send();  
+
+}; 
+
+loader.init = function(){
+
+		this.require('test' , 'test.html');
+		// здесь указать айди первый параметр,
+		// вторым параметром путь к файлу
+		// и так для каждого модуля
+
+}; 	
+
+loader.init();
+
+</script>
+
+	<!-- 
+
+все скрипты здесь , с всех модулей
+
+	 -->	
+
+	</body>
+	</html>	

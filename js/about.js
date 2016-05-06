@@ -59,9 +59,8 @@ $(document).ready(function() {
     // A U D I O  P L A Y E R
     $("#jquery_jplayer_1").jPlayer({
         ready: function () {
-        var data = $(this).attr('data-audio-jplayer');       
         $(this).jPlayer("setMedia", {
-            mp3: data,
+            mp3: "audio/ducktales_remastered.mp3",
             oga: ""
         });
         },

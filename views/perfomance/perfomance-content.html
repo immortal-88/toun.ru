@@ -31,9 +31,8 @@ perfomancePage['page']['field_project_about'][languages[language2]][0]['value']"
 </data-div>
 
                     <a href="#" class="read-piece-a">
-                    Читать пьесу
-                    ???????????????????
-{{ perfomancePage['page']['field_docu'][languages[language1]][0]['value'] }}  
+
+{{ perfomancePage['page']['field_docu'][languages[language1]][0]['description'] }}  
 
                         <img src="icon/img/read-piece.png" alt="">
                     </a>
@@ -59,11 +58,11 @@ perfomancePage['page']['field_project_about'][languages[language2]][0]['value']"
                         </div>
                     </div>
 
-<!-- 
+
 <data-div ng-bind-html="
-perfomancePage['page']['field_project_people'][languages[language2]][0]['value']">
+perfomancePage['page']['field_project_people'][languages[language1]][0]['value']">
 </data-div>
- -->
+
 
                     <div class="fe-row">
                         <div class="music-of-spectacle-title">
@@ -169,20 +168,20 @@ data-audio-jplayer="audio/ducktales_remastered.mp3";
                             <div class="prev-button photo-buttons"><img src="icon/img/prev_button.png" alt=""></div>
                             <div class="next-button photo-buttons"><img src="icon/img/next_button.png" alt=""></div>
                             <div id="lightgallery" class="owl-carousel owl-theme">
-                                <div class="item" data-src="http://1.bp.blogspot.com/-y8SPaO6KnVA/UOh1kJWZifI/AAAAAAAAheA/4Lj8eQx7AVw/s1600/sydney+australia+rubber+duck+6.jpg">
-                                    <img class="grayscale" src="https://flavorwire.files.wordpress.com/2016/04/5181176-3x2-940x627.jpg?w=205&h=138&crop=1" />
-                                </div>
+
 
 <data-repeat ng-repeat="item in perfomancePage['page']
-['field_project_photo']['field_lang_ru']" >
+['field_project_photo']['und']" >
    
                                 <div 
                                 class="item" 
-data-src="{{item['filename'] | changestartpath : 
-'/content/sites/default/files/styles/medium/public/' }}"
+data-src="{{item['uri']}}"
                                 >
                                     <img 
-src="{{item['uri']}}" 
+src="
+{{item['filename'] | changestartpath : 
+'/content/sites/default/files/styles/medium/public/' }}
+" 
                                     />
                                 </div>
 </data-repeat>
@@ -197,36 +196,30 @@ src="{{item['uri']}}"
                             <div id="video-gallery" class="owl-carousel owl-theme">
                                 <!--<div class="light-gal-item" data-src="https://www.youtube.com/watch?v=G8KpPw303PY">-->
 
-<!--  
+
+   
 <data-repeat ng-repeat="item in perfomancePage['page']
-['field_project_photo']['field_lang_ru']" >
-  -->
-                                <div class="light-gal-item" data-src="https://www.youtube.com/watch?v=G8KpPw303PY">
-                                    <!--<a class="light-gal-item" href="https://www.youtube.com/watch?v=G8KpPw303PY"-->
-                                    <img class="grayscale" src="http://img.youtube.com/vi/G8KpPw303PY/hqdefault.jpg" />
+['field_project_video']['und']" >
+                                <div class="light-gal-item" 
+data-src="{{ item['input'] | trusted }}">
+                                    <img class="grayscale" 
+src="{{ item['video_id'] 
+| changestartpath : 
+'http://img.youtube.com/vi/' 
+| changeendpath : 
+'/hqdefault.jpg' 
+ }}" />
                                 </div>
-<!--  
+   
 </data-repeat>                                
- -->
-                                <div class="light-gal-item" data-src="https://www.youtube.com/watch?v=PHAc3_MEjgQ">
-                                    <img class="grayscale" src="http://img.youtube.com/vi/PHAc3_MEjgQ/hqdefault.jpg" />
-                                </div>
-                                <div class="light-gal-item" data-src="https://www.youtube.com/watch?v=kFv4qYZQz1g">
-                                    <img class="grayscale" src="http://img.youtube.com/vi/kFv4qYZQz1g/hqdefault.jpg" />
-                                </div>
-                                <div class="light-gal-item" data-src="https://www.youtube.com/watch?v=ZpMp7RK2TMQ">
-                                    <img class="grayscale" src="http://img.youtube.com/vi/ZpMp7RK2TMQ/hqdefault.jpg" />
-                                </div>
-                                <div class="light-gal-item" data-src="https://www.youtube.com/watch?v=N8l1Cjnm9Wg">
-                                    <img class="grayscale" src="http://img.youtube.com/vi/N8l1Cjnm9Wg/hqdefault.jpg" />
-                                </div>
-                                <div class="light-gal-item" data-src="https://www.youtube.com/watch?v=e3PdcKcUvDY">
-                                    <img class="grayscale" src="http://img.youtube.com/vi/e3PdcKcUvDY/hqdefault.jpg" />
-                                </div>
+
+
+
                             </div>
                         </div>
                         <div id="tab3" class="tab">
                             <!-- P U B L I C A T I O N S -->
+
                             <p class="about-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias assumenda ipsum nisi, optio quas quis ullam veritatis! Deleniti excepturi ipsam, maxime mollitia nam nesciunt, praesentium quaerat recusandae reprehenderit sunt
                                 voluptatem.
                             </p>
@@ -250,18 +243,44 @@ src="{{item['uri']}}"
                             <!-- F E E D B A C K -->
                             <div class="fe-row">
                                 <div class="fe-col-12">
-                                    <div class="post">
-                                        <p class="post-name">Александр</p>
-                                        <p class="post-date">02/05/2016</p>
-                                        <p class="post-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, dolore dolorem fugiat hic labore laboriosam magni nemo nisi nobis non, nostrum provident quibusdam repellat reprehenderit repudiandae rerum temporibus
-                                            vel voluptatum!</p>
-                                    </div>
+
+
                                     <form class="feedback-form" action="">
-                                        <h4 class="feedback-title">Оставить отзыв:</h4>
-                                        <input class="feedback feedback-name" type="text" placeholder="Имя Фамилия">
-                                        <textarea class="feedback feedback-text" name="textarea" rows="8" cols="40" placeholder="Текст отзыва"></textarea>
-                                        <input class="submit-button" type="submit" name="submit-button" value="Отправить">
+                                        <h4 class="feedback-title">
+{{ perfomancePage['page']['static'][languages[language1]]['review_title'] }}
+</h4>
+                                        <input class="feedback feedback-name" type="text" 
+placeholder="
+{{ perfomancePage['page']['static'][languages[language1]]['placeholder_name'] }}
+"
+required="required" 
+>
+                                        <textarea class="feedback feedback-text" name="textarea" rows="8" cols="40" 
+placeholder="
+{{ perfomancePage['page']['static'][languages[language1]]['placeholder_text'] }}
+"
+required="required" 
+></textarea>
+                                        <input class="submit-button" type="submit" name="submit-button" 
+value="
+{{ perfomancePage['page']['static'][languages[language1]]['send_button'] }}"
+>
                                     </form>
+
+                                    <div 
+ng-repeat="item in perfomancePage['comments']"
+                                    class="post" >
+                                        <p class="post-name">
+{{ item['comment_body']['#object']['subject'] }}
+                                        </p>
+                                        <p class="post-date">
+{{ item['comment_body']['#object']['created'] | fromtimestamp }}
+</p>
+                                        <p class="post-message">
+{{ item['comment_body']['#object']['comment_body']['und'][0]['value'] }}
+ </p>
+                                    </div>                                  
+
                                 </div>
                             </div>
                         </div>
@@ -283,27 +302,24 @@ src="{{item['uri']}}"
                                     <div class="item" data-src="http://1.bp.blogspot.com/-y8SPaO6KnVA/UOh1kJWZifI/AAAAAAAAheA/4Lj8eQx7AVw/s1600/sydney+australia+rubber+duck+6.jpg">
                                         <img class="grayscale" src="https://flavorwire.files.wordpress.com/2016/04/5181176-3x2-940x627.jpg?w=205&h=138&crop=1" />
                                     </div>
-                                    <div class="item" data-src="img/big_image.jpg">
-                                        <img src="img/s22_pic2.jpg" />
-                                    </div>
-                                    <div class="item" data-src="img/big_image.jpg">
-                                        <img src="img/s22_pic3.jpg" />
-                                    </div>
-                                    <div class="item" data-src="img/big_image.jpg">
-                                        <img src="img/s22_pic4.jpg" />
-                                    </div>
-                                    <div class="item" data-src="img/big_image.jpg">
-                                        <img src="img/s22_pic1.jpg" />
-                                    </div>
-                                    <div class="item" data-src="img/big_image.jpg">
-                                        <img src="img/s22_pic2.jpg" />
-                                    </div>
-                                    <div class="item" data-src="img/big_image.jpg">
-                                        <img src="img/s22_pic3.jpg" />
-                                    </div>
-                                    <div class="item" data-src="img/big_image.jpg">
-                                        <img src="img/s22_pic4.jpg" />
-                                    </div>
+
+
+<data-repeat ng-repeat="item in perfomancePage['page']
+['field_project_photo']['und']" >  
+                                <div 
+                                class="item" 
+data-src="{{item['uri']}}"
+                                >
+                                    <img 
+src="
+{{item['filename'] | changestartpath : 
+'/content/sites/default/files/styles/medium/public/' }}
+" 
+                                    />
+                                </div>
+</data-repeat>
+
+
                                 </div>
                             </div>
                         </div>
@@ -315,24 +331,22 @@ src="{{item['uri']}}"
                         <div id="accordion-2" class="accordion-section-content">
                             <!-- V I D E O   C A R O U S E L -->
                             <div id="video-gallery2" class="owl-carousel owl-theme">
-                                <div class="light-gal-item" data-src="https://www.youtube.com/watch?v=G8KpPw303PY">
-                                    <img src="http://img.youtube.com/vi/G8KpPw303PY/hqdefault.jpg" />
-                                </div>
-                                <div class="light-gal-item" data-src="https://www.youtube.com/watch?v=PHAc3_MEjgQ">
-                                    <img src="http://img.youtube.com/vi/PHAc3_MEjgQ/hqdefault.jpg" />
-                                </div>
-                                <div class="light-gal-item" data-src="https://www.youtube.com/watch?v=kFv4qYZQz1g">
-                                    <img src="http://img.youtube.com/vi/kFv4qYZQz1g/hqdefault.jpg" />
-                                </div>
-                                <div class="light-gal-item" data-src="https://www.youtube.com/watch?v=ZpMp7RK2TMQ">
-                                    <img src="http://img.youtube.com/vi/ZpMp7RK2TMQ/hqdefault.jpg" />
-                                </div>
-                                <div class="light-gal-item" data-src="https://www.youtube.com/watch?v=N8l1Cjnm9Wg">
-                                    <img src="http://img.youtube.com/vi/N8l1Cjnm9Wg/hqdefault.jpg" />
-                                </div>
-                                <div class="light-gal-item" data-src="https://www.youtube.com/watch?v=e3PdcKcUvDY">
-                                    <img src="http://img.youtube.com/vi/e3PdcKcUvDY/hqdefault.jpg" />
-                                </div>
+  
+<data-repeat ng-repeat="item in perfomancePage['page']
+['field_project_video']['und']" >
+                                <div class="light-gal-item" 
+data-src="{{ item['input'] | trusted }}">
+                                    <img class="grayscale" 
+src="{{ item['video_id'] 
+| changestartpath : 
+'http://img.youtube.com/vi/' 
+| changeendpath : 
+'/hqdefault.jpg' 
+ }}" />
+                                </div>   
+</data-repeat>  
+
+                                
                             </div>
                         </div>
                     </div>
@@ -375,18 +389,48 @@ src="{{item['uri']}}"
                             <!--F E E D B A C K-->
                             <div class="fe-row">
                                 <div class="fe-col-12">
-                                    <div class="post">
-                                        <p class="post-name">Александр</p>
-                                        <p class="post-date">02/05/2016</p>
-                                        <p class="post-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, dolore dolorem fugiat hic labore laboriosam magni nemo nisi nobis non, nostrum provident quibusdam repellat reprehenderit repudiandae rerum temporibus
-                                            vel voluptatum!</p>
-                                    </div>
+
+
                                     <form class="feedback-form" action="">
-                                        <h4 class="feedback-title">Оставить отзыв:</h4>
-                                        <input class="feedback feedback-name" type="text" placeholder="Имя Фамилия">
-                                        <textarea class="feedback feedback-text" name="textarea" rows="8" cols="40" placeholder="Текст отзыва"></textarea>
-                                        <input class="submit-button" type="submit" name="submit-button" value="Отправить">
+                                        <h4 class="feedback-title">
+{{ perfomancePage['page']['static'][languages[language1]]['review_title'] }}
+</h4>
+                                        <input class="feedback feedback-name" type="text"
+placeholder="
+{{ perfomancePage['page']['static'][languages[language1]]['placeholder_name'] }}
+"
+required="required" 
+>
+
+                                        <textarea class="feedback feedback-text" name="textarea" rows="8" cols="40" 
+placeholder="
+{{ perfomancePage['page']['static'][languages[language1]]['placeholder_text'] }}
+"
+required="required" 
+>
+</textarea>
+                                        <input class="submit-button" type="submit" name="submit-button" 
+value="
+{{ perfomancePage['page']['static'][languages[language1]]['send_button'] }}"
+>
                                     </form>
+
+
+                                    <div 
+ng-repeat="item in perfomancePage['comments']"
+                                    class="post" >
+                                        <p class="post-name">
+{{ item['comment_body']['#object']['subject'] }}
+                                        </p>
+                                        <p class="post-date">
+{{ item['comment_body']['#object']['created'] | fromtimestamp }}
+</p>
+                                        <p class="post-message">
+{{ item['comment_body']['#object']['comment_body']['und'][0]['value'] }}
+ </p>
+                                    </div>  
+
+
                                 </div>
                             </div>
 
@@ -439,3 +483,5 @@ src="{{item['uri']}}"
             </div>
         </footer>
     </div>
+
+

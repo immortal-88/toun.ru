@@ -1,50 +1,42 @@
-		
-			<!-- Header -->
-			
-		
-			<header>
-			
-				<div class="fe-row">
-				
-					<div class="fe-col-3 fe-col-m-only">
-					
-						<div id="header_left" >
-<p ng-bind-html="mainPage['header'][languages[language1]]['adress_head']  | replaceNtoBR"></p>
+		<!-- H E A D E R -->
+		<header class="header_main">
+			<div class="fe-row">
+				<!-- H E A D E R  L E F T -->
+				<div class="fe-col-3 fe-col-m-only">
 
-							<p id="header_left_scheme">
+					<div class="header_left">
+<p ng-bind-html="mainPage['header'][languages[language1]]['adress_head']  | replaceNtoBR"></p>
+						<p class="header_left_scheme"> 
 {{ mainPage['header'][languages[language1]]['title_map'] }}
-							 <img src="icon/img/location.png" alt="icon" style="position: relative; top: 4px; left: 8px;" /> </p>
-						
-						</div>
-					
+<img src="icon/img/location.png" alt="icon" style="position: 
+relative; top: 4px; left: 8px;" /> </p>
 					</div>
-					
-					<div class="fe-col-6 fe-col-m-only">
-					
-						<div id="header_center">
-						
-							<p id="header_center_title" class="fe-col-m-only"> 
-{{ mainPage['header'][languages[language1]]['slogan_top'] | uppercase}}  </p>
-							
-							<div id="header_center_logo"> <a href="index.html"> 
-<img src="{{ mainPage['header'][languages[language1]]['logo_horisontal'] }}"> </a> </div>
-						
+
+				</div>
+				<!-- H E A D E R  C E N T E R -->
+				<div class="fe-col-6 fe-col-m-only">
+					<div class="header_center">
+						<p class="header_center_title fe-col-m-only">
+{{ mainPage['header'][languages[language1]]['slogan_top'] | uppercase}}
+</p>
+						<div class="header_center_logo">
+							<a href="index.html"><img 
+src="{{ mainPage['header'][languages[language1]]['logo_horisontal'] }}" alt="logo.png"></a>
 						</div>
-					
 					</div>
-					
-					<div class="fe-col-3 fe-col-m-only">
-					
-						<div id="header_right">
-						
-							<p id="header_right_cecutient"> <a href="#"> 
+				</div>
+				<!-- H E A D E R  R I G H T -->
+				<div class="fe-col-3 fe-col-m-only">
+					<div class="header_right">
+						<p class="header_right_cecutient"> <a href="#"> 
 {{ mainPage['header'][languages[language1]]['eyesight'] | firstUpperCase }}
-<img src="icon/img/glasses.png" alt="icon" style="position: relative; top: 5px;" /> </a> </p>
+						<img src="icon/img/glasses.png" alt="icon" style="position: relative; top: 5px;" /> </a> </p>
+
 						
 {{ mainPage['settings']['phone_first'] }}<br />
 {{ mainPage['settings']['phone_second'] }}
-							 
-							 <div id="language">
+
+						<div class="language">
 							 
 								 <a href="#"> <div 								 
 								 ng-click="changelanguage('ru', 1)"
@@ -62,23 +54,19 @@
 								 ng-click="changelanguage('mns', 2)"
 								 class="{{ language2 == 'mns' ? 'language_element active-language': 'language_element' }}"> 
 								 Мнс </div> </a>
-							 
-							 </div>
- 						
-						</div> 
-					
+						</div>
 					</div>
-				
 				</div>
-				
-				<div id="header_center_logo-mobile" class="fe-none"> <a href="index.html"> <img class="fe-img" src="icon/img/logo.jpg"> </a> </div>
-				
-				<div id="header_logo">
-				
-					 <div id="header_logo_image"> <a href="index.html"> <img src="icon/img/icon-logo.png" alt="logo" /> </a> </div> 
-				
+			</div>
+			<!-- H E A D E R  C E N T E R  L O G O -->
+			<div id="header_center_logo-mobile" class="fe-none">
+				<a href="index.html"><img class="fe-img" src="icon/img/logo.jpg" alt="logo.jpg"></a>
+			</div>
+			<div id="header_logo">
+				<div id="header_logo_image">
+					<a href="index.html"> <img src="icon/img/icon-logo.png" alt="logo" /></a>
 				</div>
-				
-				<button class="fe-none" id="small-menu-buttton"> </button>
-			
-			</header>
+			</div>
+		</header>
+
+

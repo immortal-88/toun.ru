@@ -12,6 +12,7 @@ ajaxService, localStorageService, languageService, pageService, routeService) {
 
 taatrApp.controller("MainCtrl", function (
 $scope, $location, $route, $log,
+$ocLazyLoad,
 ajaxService, localStorageService, languageService, pageService, routeService) {
 
    $log.debug( $location.path() +" MainCtrl" );
