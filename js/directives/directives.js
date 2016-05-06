@@ -57,3 +57,19 @@ customDirectives.directive('setAtrForMenuDir', function () {
         }
     }
 });
+
+customDirectives.directive('submitDir', function () {
+    return {
+        restrict: "AE",
+        scope : false,
+        link: function (scope, element) {
+            element.bind('submit', function (event) {
+                console.log("mousedown");
+            });
+        }
+    };
+}
+
+
+
+);

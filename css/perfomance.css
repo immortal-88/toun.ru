@@ -433,7 +433,8 @@
 
 #perfomance-wrapper .post {
     width: 100%;
-    margin: auto;
+    margin: 15px auto;
+    border: 2px solid red;
 }
 
 #perfomance-wrapper .post-date {
