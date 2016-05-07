@@ -28,7 +28,7 @@ mainPage['2-day']['widget']"
 								<div class="nearest-event_left_text">
 							
 								     <p class="nearest-event_date"> <span class="title-big"> 
-{{ item[languages[language1]]['item']['date'] }}
+{{ item[languages[language1]]['item']['date_full'] }}
 								      <span> </p>
 									
 									 <p class="nearest-event_title"> <span class="title-big"> <a href="index.html"> 
@@ -38,7 +38,7 @@ mainPage['2-day']['widget']"
 									  </span> </p> 
 									 
 									 <p class="nearest-event_about">
-{{ item[languages[language1]]['item']['description'] | onlyCharacters : 85 }}								  
+{{ item[languages[language1]]['item']['body'] | onlyCharacters : 85 }}								  
 									  </p>
 									 
 									 <p class="main_event_elements_status" style="padding-left:66px; margin-top: 10px;" > <a href="index.html"> 

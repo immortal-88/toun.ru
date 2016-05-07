@@ -121,14 +121,16 @@ ar['ru'] = 'field_lang_ru';
 
 var page = localStorageService.get(nameOfPage);
 var lang = localStorageService.get('language1');
+console.log( page );
+
+if ( page ) {
+
+    $( 'title' ).html( page['seo'][ar[lang]]['title'] );
 
 
-$( 'title' ).html( page['seo'][ar[lang]]['title'] );
-
-
-$( 'meta[name="description"]' ).attr('description',
- page['seo'][ar[lang]]['description'] );   
-
+    $( 'meta[name="description"]' ).attr('description',
+    page['seo'][ar[lang]]['description'] );   
+}
         }
 
     }
