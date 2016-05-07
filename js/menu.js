@@ -30,7 +30,7 @@ $(function () {
                 $('#menu_about').removeClass('inverse-menu');
                 $('#menu_about .menu_paragraph').addClass('inverse-arrows');
                 $('#menu_about img').replaceWith("<img src='icon/img/teatr-logo-small-white.png' />");
-                console.log('show');
+
             }
             else if (currentScroll > 0) {
                 if (!($('#menuTop').hasClass('inverse-nav'))) {
@@ -41,10 +41,9 @@ $(function () {
                 }
                 if (currentScroll > previousScroll && $('#menuTop').css('top') == '0px' && $('#menu-small').css('display') == 'none') {
                     $('#menuTop').addClass('menu-hide');
-                    console.log('hide');
                 } else if (currentScroll < previousScroll && $('#menuTop').css('top') == '-150px') {
                     $('#menuTop').removeClass('menu-hide');
-                    console.log('show');
+
                 }
             }
             previousScroll = currentScroll;

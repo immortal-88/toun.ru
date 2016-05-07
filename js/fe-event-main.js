@@ -30,4 +30,4 @@ setInterval(function(){
 	});
 
 
-}, 3000);
+}, 3500);
