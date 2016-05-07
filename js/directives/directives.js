@@ -58,6 +58,46 @@ customDirectives.directive('setAtrForMenuDir', function () {
     }
 });
 
+customDirectives.directive('videoSetDir', function () {
+    return {
+        restrict: "A",
+        scope : false,
+        link: function (scope, element, attr) {
+                element.ready(function () {
+
+if(scope['mainPage']) {
+    var fild = attr['fildname'];
+    var id = attr['videoid'];
+    var video = document.getElementById(id);
+    var source = document.createElement('source');
+    source.setAttribute('src', scope['mainPage']['lenta'][fild]);
+    video.appendChild(source);
+    video.play();                      
+}
+
+                });
+        }
+    }
+});
+
+
+customDirectives.directive('imgSetDir', function () {
+    return {
+        restrict: "A",
+        scope : false,
+        link: function (scope, element, attr) {
+                element.ready(function () {
+
+if(scope['mainPage']) {
+    var fild = attr['fildname'];
+    source.setAttribute('src', scope['mainPage']['lenta'][fild]);                     
+}
+
+                });
+        }
+    }
+});
+
 customDirectives.directive('submitDir', function () {
     return {
         restrict: "AE",
@@ -67,9 +107,5 @@ customDirectives.directive('submitDir', function () {
                 console.log("mousedown");
             });
         }
-    };
-}
-
-
-
-);
+    }
+});

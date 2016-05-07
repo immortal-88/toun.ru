@@ -420,24 +420,3 @@
     }
 }
 
-/* F O O T E R */
-.global-module-part-main footer {
-    border-top: 3px solid #EDEDED;
-    margin-top: 80px;
-    padding: 20px 0px;
-}
-.global-module-part-main #footer_address {
-    display: inline-block;
-    text-align: left;
-    font-size: 14px;
-}
-.global-module-part-main #footer_phone {
-    display: inline-block;
-}
-.global-module-part-main #footer_icon {
-    margin: auto;
-}
-.global-module-part-main #footer_icon li {
-    padding: 0px 10px;
-}
-

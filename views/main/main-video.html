@@ -4,19 +4,20 @@
 			
 			<div id="video">
 			
-				<video autoplay loop>
-				
-					<source 
-					src="{{	mainPage['lenta']['video_lenta_mp4'] }}" 
-					/>
-					
+				<video autoplay loop
+			video-set-dir
+			videoid = 'videoid'
+			fildname='video_lenta_mp4'
+			id='videoid'	>
 				</video>
 				
 				<div class="fe-none" id="video-image">
 				
-					 <img class="fe-img" 
-					 src="{{ mainPage['lenta']['video_lenta_jpg'] }}" 
-					 alt="people" />
+					 <img class="fe-img"
+  					img-set-dir
+ 					fildname='video_lenta_jpg' 					
+
+					 alt="people"  />
 				
 				</div>
 			
