@@ -7,7 +7,7 @@
 
 <data-repeat ng-repeat-start="item in mainPage['menu']" >
 </data-repeat>
-              <li class="menu_item">
+              <li class="menu_item"  ng-class=" $last ? 'gb-color-like-red' : '' " >
                 <p class="menu_paragraph">
                   <a href="#">
                     <span class="menu_main-span">
@@ -41,7 +41,7 @@
 
 <data-set ng-init="itemofmenu='#menu-'+$index" ></data-set>
 
-        <li class="accordion-section">
+        <li class="accordion-section" ng-class=" $last ? 'gb-color-like-red' : '' " >
           <p class="menu-small_paragraph">
    
 <data-wrap-for-js class='js-only-click-accordion'
