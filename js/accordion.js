@@ -5,28 +5,27 @@ $(document).ready(function() {
 
     $('.activeContent').show();
 
-    function close_accordion_section() {
-        $('.accordion .accordion-section-title').removeClass('active');
-        $('.accordion .accordion-section-content').slideUp(300).removeClass('open');
-    }
-
-    $('.accordion-section-title').click(function(e) {
+    $('.js-only-click-accordion').click(function(e) {
         // Grab current anchor value
         var currentAttrValue = $(this).attr('datamenuhref');
         console.log( currentAttrValue );
-        
+        console.log( $(this).is('.active') ); 
 
-        if($(e.target).is('.active')) {
-            close_accordion_section();
-        }else {
-            close_accordion_section();
+        if( ! $(this).is('.active') ){       
 
             // Add active class to section title
             $(this).addClass('active');
             // Open up the hidden content panel
             $('.accordion ' + currentAttrValue).stop().slideDown(300).addClass('open');
+
+        } else {
+
+            $(this).removeClass('active');
+            $('.accordion ' + currentAttrValue).slideUp(300).removeClass('open');
+
         }
 
         e.preventDefault();
+
     });
 });

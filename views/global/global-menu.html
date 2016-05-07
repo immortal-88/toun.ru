@@ -43,12 +43,17 @@
 
         <li class="accordion-section">
           <p class="menu-small_paragraph">
-            <a 
-            set-atr-for-menu-dir datamenuhref='true'
-            class="accordion-section-title menu_main-span inner-box-text"
-        href="#">
-{{ item[languages[language1]]['und'][0]['value'] }} 
-            </a>
+   
+<data-wrap-for-js class='js-only-click-accordion'
+set-atr-for-menu-dir datamenuhref='true'>         
+  <a class="accordion-section-title">
+  <span class="menu-small-arrow">&#0155</span>
+  </a>
+  <a class="menu_main-span menu-small-link" href="#">
+  {{ item[languages[language1]]['und'][0]['value'] }} 
+  </a>
+</data-wrap-for-js>
+ 
           </p>
 <data-submenu ng-if="item['children']" >
           <div 

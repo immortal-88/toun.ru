@@ -5,9 +5,11 @@
     height: 100px;
     position: absolute;
     top: 50%;
-    left: 45%;
-    margin: auto;
+    left: 50%;
+    margin-left: -50px;
+    margin-top:-50px;
 }
+
 #fe-wrapper {
     max-width: 1920px;
     min-width: 320px;
