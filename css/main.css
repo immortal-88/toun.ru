@@ -16,10 +16,10 @@
 }
 
 /* H E A D E R */
-#main_page .header_main {
+.global-module-part .header_main {
     padding-top: 30px;
 }
-#main_page .header_left {
+.global-module-part .header_left {
     width: 150px;
     margin: auto;
     text-align: left;
@@ -27,54 +27,54 @@
     font-size: 12px;
     line-height: 20px;
 }
-#main_page .header_left_scheme {
+.global-module-part .header_left_scheme {
     margin-top: 2px;
     cursor: pointer;
     transition: color 0.3s;
 }
-#main_page .header_left_scheme:hover {
+.global-module-part .header_left_scheme:hover {
     color: #000000;
 }
-#main_page .header_center {
+.global-module-part .header_center {
     text-align: center;
     color: #606060;
 }
-#main_page .header_right {
+.global-module-part .header_right {
     width: 150px;
     margin: -5px auto 0px;
     text-align: right;
     color: #818181;
     font-size: 12px;
 }
-#main_page .header_right_cecutient {
+.global-module-part .header_right_cecutient {
     margin-bottom: 3px;
     transition: color 0.3s;
 }
-#main_page .header_right_cecutient:hover {
+.global-module-part .header_right_cecutient:hover {
     color: #000000;
 }
-#main_page .language {
+.global-module-part .language {
     width: 66px;
     overflow: hidden;
     float: right;
     margin-top: 5px;
 }
-#main_page .language_element {
+.global-module-part .language_element {
     float: left;
     padding: 2px 4px;
     text-align: center;
     cursor: pointer;
 }
-#main_page .header_center_title {
+.global-module-part .header_center_title {
     font-size: 12px;
 }
-#main_page .header_center_logo {
+.global-module-part .header_center_logo {
     margin-top: 20px;
 }
-#main_page .header_logo {
+.global-module-part .header_logo {
     padding: 25px 0px 100px;
 }
-#main_page #header_logo_image {
+.global-module-part #header_logo_image {
     width: 100px;
     margin: auto;
     transition: transform 1s;
@@ -82,13 +82,13 @@
 }
 
 /* V I D E O  B O X */
-#main_page #video {
+.global-module-part #video {
     height: 270px;
     overflow: hidden;
     margin: 40px auto 0px;
     text-align: center;
 }
-#main_page #video video {
+.global-module-part #video video {
     vertical-align: bottom;
     margin-top: -70px;
 }
@@ -97,7 +97,7 @@
         margin-left: -4776px;
     }
 }
-#main_page #video-image {
+.global-module-part #video-image {
     height: 100%;
     width: 5800px;
     overflow: hidden;
@@ -106,37 +106,37 @@
 
 /* C O N T E N T */
 
-#main_page #content {
+.global-module-part #content {
     margin-top: 104px;
 }
 
 /* N E A R E S T  E V E N T */
 
-#main_page #nearest-event {
+.global-module-part #nearest-event {
     max-width: 1600px;
     margin: auto;
 }
-#main_page #nearest-event_h {
+.global-module-part #nearest-event_h {
     margin-bottom: 30px;
     text-align: center;
 }
-#main_page #nearest-event_h h3 {
+.global-module-part #nearest-event_h h3 {
     display: inline-block;
     padding: 2px 0px;
 }
-#main_page .nearest-event_left {
+.global-module-part .nearest-event_left {
     width: 495px;
     height: 265px;
     overflow: hidden;
     margin: auto;
 }
-#main_page .nearest-event_right {
+.global-module-part .nearest-event_right {
     width: 495px;
     height: 265px;
     overflow: hidden;
     margin: auto;
 }
-#main_page .nearest-event_left_text {
+.global-module-part .nearest-event_left_text {
     border-top: 3px solid #EDEDED;
     border-bottom: 3px solid #EDEDED;
     width: 290px;
@@ -144,7 +144,7 @@
     float: left;
     padding-top: 40px;
 }
-#main_page .nearest-event_right_text {
+.global-module-part .nearest-event_right_text {
     border-top: 3px solid #EDEDED;
     border-bottom: 3px solid #EDEDED;
     width: 290px;
@@ -152,39 +152,39 @@
     float: right;
     padding-top: 40px;
 }
-#main_page .nearest-event_left_text .nearest-event_date {
+.global-module-part .nearest-event_left_text .nearest-event_date {
     padding-left: 66px;
 }
-#main_page .nearest-event_left_text .nearest-event_title {
+.global-module-part .nearest-event_left_text .nearest-event_title {
     padding-left: 66px;
     margin-top: 10px;
 }
-#main_page .nearest-event_left_text .nearest-event_about {
+.global-module-part .nearest-event_left_text .nearest-event_about {
     padding-left: 66px;
     padding-right: 20px;
 }
-#main_page .nearest-event_right_text .nearest-event_date {
+.global-module-part .nearest-event_right_text .nearest-event_date {
     margin-left: 26px;
 }
-#main_page .nearest-event_right_text .nearest-event_title {
+.global-module-part .nearest-event_right_text .nearest-event_title {
     margin-left: 26px;
     margin-top: 10px;
     padding-right: 40px;
 }
-#main_page .nearest-event_right_text .nearest-event_about {
+.global-module-part .nearest-event_right_text .nearest-event_about {
     margin-left: 26px;
     padding-right: 40px;
 }
-#main_page .nearest-event_about {
+.global-module-part .nearest-event_about {
     margin-top: 10px;
     font-size: 18px;
 }
-#main_page .nearest-event_left_image {
+.global-module-part .nearest-event_left_image {
     width: 205px;
     height: 265px;
     float: left;
 }
-#main_page .nearest-event_right_image {
+.global-module-part .nearest-event_right_image {
     width: 205px;
     height: 265px;
     float: right;
@@ -192,45 +192,45 @@
 
 /* M A I N */
 
-#main_page #main {
+.global-module-part #main {
     max-width: 1500px;
     margin: 100px auto 0px;
 }
 
 /* E V E N T */
 
-#main_page #main_event {
+.global-module-part #main_event {
     width: 460px;
     margin: auto;
     margin-bottom: 30px;
 }
-#main_page #main_event h4 {
+.global-module-part #main_event h4 {
     padding-bottom: 10px;
     padding-left: 30px;
 }
-#main_page .main_event_element {
+.global-module-part .main_event_element {
     border-top: 3px solid #EDEDED;
     width: 100%;
     margin-top: 20px;
     padding-top: 25px;
     overflow: hidden;
 }
-#main_page .main_event_elements_title {
+.global-module-part .main_event_elements_title {
     margin-top: 5px;
     padding-left: 20px;
     font-weight: 700;
 }
-#main_page .main_event_elements_about {
+.global-module-part .main_event_elements_about {
     margin-top: 5px;
     padding-left: 20px;
 }
-#main_page .main_event_elements_status {
+.global-module-part .main_event_elements_status {
     margin-top: 5px;
     color: red;
     font-size: 12px;
     font-weight: 700;
 }
-#main_page .main_event_elements_address {
+.global-module-part .main_event_elements_address {
     margin-top: 5px;
     padding-right: 30px;
     font-size: 12px;
@@ -238,92 +238,92 @@
 
 /* N E W S */
 
-#main_page #main_news {
+.global-module-part #main_news {
     width: 460px;
     margin: auto;
 }
-#main_page .main_news_elements_image {
+.global-module-part .main_news_elements_image {
     width: 200px;
     height: 200px;
 }
-#main_page #main_news h4 {
+.global-module-part #main_news h4 {
     padding-bottom: 10px;
     padding-left: 40px;
 }
-#main_page .main_news_element {
+.global-module-part .main_news_element {
     border-top: 3px solid #EDEDED;
     margin-top: 20px;
     padding-top: 25px;
     overflow: hidden;
 }
-#main_page .main_news_elements_title {
+.global-module-part .main_news_elements_title {
     margin-top: -5px;
 }
-#main_page .main_news_elements_date {
+.global-module-part .main_news_elements_date {
     font-size: 12px;
     margin-top: 3px;
 }
-#main_page .main_news_elements_about {
+.global-module-part .main_news_elements_about {
     margin-top: 20px;
 }
-#main_page .main_news_elements_detalis {
+.global-module-part .main_news_elements_detalis {
     font-size: 10px;
     margin-top: 26px;
 }
-#main_page .main_news_elements_detalis:hover {
+.global-module-part .main_news_elements_detalis:hover {
     color: #ED8A8A;
 }
 
-#main_page #wrapper_main_more {
+.global-module-part #wrapper_main_more {
     width: 460px;
     margin: auto;
     margin-bottom: 30px;
 }
 
-#main_page .main_more {
+.global-module-part .main_more {
     margin-top: 50px;
     font-size: 13px;
     cursor: pointer;
 }
-#main_page .main_more:hover {
+.global-module-part .main_more:hover {
     color: #ED8A8A;
 }
 
 /* F O O T E R */
-#main_page footer {
+.global-module-part footer {
     border-top: 3px solid #EDEDED;
     margin-top: 80px;
     padding: 20px 0px;
 }
-#main_page #footer_address {
+.global-module-part #footer_address {
     display: inline-block;
     text-align: left;
     font-size: 14px;
 }
-#main_page #footer_phone {
+.global-module-part #footer_phone {
     display: inline-block;
 }
-#main_page #footer_icon {
+.global-module-part #footer_icon {
     margin: auto;
 }
-#main_page #footer_icon li {
+.global-module-part #footer_icon li {
     padding: 0px 10px;
 }
 
 /* D I F F E R E N T */
 
-#main_page .title-big {
+.global-module-part .title-big {
     font-family: pt-serif-bold;
     color: #000000;
     font-size: 18px;
     letter-spacing: 1px;
 }
-#main_page .title-small {
+.global-module-part .title-small {
     color: #585858;
     font-size: 12px;
     letter-spacing: 1px;
 }
-#main_page .active-language {
+.global-module-part .active-language {
     font-weight: 700;
 }
 
@@ -333,36 +333,36 @@
 /* S M A L L */
 
 @media screen and (max-width: 949px) {
-    #main_page .header_main {
+    .global-module-part .header_main {
         padding-top: 10px;
     }
-    #main_page #menuTop {
+    .global-module-part #menuTop {
         width: 100%;
         position: fixed;
         top: 0;
         transition: all 1s;
         z-index: 999;
     }
-    #main_page #small-menu-buttton {
+    .global-module-part #small-menu-buttton {
         display: block !important;
     }
-    #main_page #header_logo {
+    .global-module-part #header_logo {
         padding: 0px 0px !important;
         width: 100px;
         margin: 20px auto;
     }
-    #main_page #header_center_logo-mobile {
+    .global-module-part #header_center_logo-mobile {
         display: block;
         width: 180px;
         margin: 20px 20px;
     }
-    #main_page .nearest-event_right {
+    .global-module-part .nearest-event_right {
         margin-top: 40px;
     }
-    #main_page #main_news h4 {
+    .global-module-part #main_news h4 {
         text-align: center;
     }
-    #main_page #main_event h4 {
+    .global-module-part #main_event h4 {
         text-align: center;
     }
 }
@@ -370,68 +370,68 @@
 /* N A N O */
 
 @media screen and (max-width: 749px) {
-    #main_page .nearest-event_left {
+    .global-module-part .nearest-event_left {
         width: 100%;
         height: auto;
     }
-    #main_page .nearest-event_left_text {
+    .global-module-part .nearest-event_left_text {
         border-bottom: none;
         width: 55%;
         height: auto;
         padding-top: 2px;
     }
-    #main_page .nearest-event_left_image {
+    .global-module-part .nearest-event_left_image {
         width: 45%;
     }
-    #main_page .nearest-event_left_text .nearest-event_date {
+    .global-module-part .nearest-event_left_text .nearest-event_date {
         padding-left: 10px;
     }
-    #main_page .nearest-event_left_text .nearest-event_title {
+    .global-module-part .nearest-event_left_text .nearest-event_title {
         padding-left: 10px;
     }
-    #main_page .nearest-event_left_text .nearest-event_about {
+    .global-module-part .nearest-event_left_text .nearest-event_about {
         padding-left: 10px;
     }
-    #main_page .nearest-event_right {
+    .global-module-part .nearest-event_right {
         width: 100%;
         height: auto;
     }
-    #main_page .nearest-event_right_text {
+    .global-module-part .nearest-event_right_text {
         border-bottom: none;
         width: 55%;
         height: auto;
         padding-top: 2px;
     }
-    #main_page .nearest-event_right_image {
+    .global-module-part .nearest-event_right_image {
         width: 45%;
     }
-    #main_page #main_event {
+    .global-module-part #main_event {
         width: 100%;
     }
-    #main_page #main_news {
+    .global-module-part #main_news {
         width: 100%;
     }
-    #main_page .main_news_elements_image {
+    .global-module-part .main_news_elements_image {
         width: auto;
         height: auto;
     }
-    #main_page .main_news_elements_title {
+    .global-module-part .main_news_elements_title {
         padding-left: 15px;
     }
-    #main_page .main_news_elements_date {
+    .global-module-part .main_news_elements_date {
         padding-left: 15px;
     }
-    #main_page .main_news_elements_about {
+    .global-module-part .main_news_elements_about {
         padding-left: 15px;
     }
-    #main_page .main_news_elements_detalis {
+    .global-module-part .main_news_elements_detalis {
         padding-left: 15px;
         font-size: 20px;
     }
-    #main_page #footer_phone {
+    .global-module-part #footer_phone {
         margin-top: 30px;
     }
-    #main_page #footer_icon {
+    .global-module-part #footer_icon {
         margin-top: 30px;
     }
 }

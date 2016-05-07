@@ -1,0 +1,13 @@
+.common_top-heading {
+    text-align: center;
+    font-size: 26px;
+}
+
+.common_top-subheading {
+    text-align: center;
+    font-size: 18px;
+    color: #464646;
+}
+.common_page-margin {
+    margin-top: 130px;
+}

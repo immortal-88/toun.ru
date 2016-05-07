@@ -10,15 +10,18 @@ var taatrApp = angular.module("TaatrApp",
 .config(function($routeProvider, $locationProvider) {
     $routeProvider.
       when('/', {
-        templateUrl: 'views/main/main.html',
-        controller: 'MainCtrl'
+        templateUrl: '/views/main/init.html',
+        controller: 'MainCtrl',
+        title: 'Main'
       }).      
-      when('/perfomance', {
-        templateUrl: 'views/perfomance/perfomance.html',
-        controller: 'PerfomanceCtrl'
+      when('/perfomance/25', {
+        templateUrl: '/views/perfomance/init.html',
+        controller: 'PerfomanceCtrl',
+        title: 'Perfomance'
       }).  
-      when('/test', {
-        templateUrl: 'loader.html'
+      when('/repertuar', {
+        templateUrl: '/views/repertuar/init.html',
+        controller: 'RepertuarCtrl',        
       }).      
       otherwise({
         redirectTo: '/'

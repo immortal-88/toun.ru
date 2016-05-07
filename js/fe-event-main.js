@@ -3,7 +3,7 @@
 
 // P A G E  L O A D
 
-setInterval(function(){
+setTimeout(function(){
 
 	console.log( "after load" );
 	
@@ -26,6 +26,7 @@ setInterval(function(){
 	headerLogoImage.addEventListener("mouseover",function()	{
 		var value = fe_g.logoDeg + 360;
 		headerLogoImage.style.transform = "rotate(" + value.toString() + "deg)";
+		headerLogoImage.style['-webkit-transform'] = "rotate(" + value.toString() + "deg)";		
 		fe_g.logoDeg = fe_g.logoDeg + 360 ;
 	});
 

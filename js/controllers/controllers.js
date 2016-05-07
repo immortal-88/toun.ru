@@ -4,7 +4,8 @@
 taatrApp.controller("AppCtrl", function (
 $scope, $location, $route, $log,
 $ocLazyLoad,
-ajaxService, localStorageService, languageService, pageService, routeService) {
+ajaxService, localStorageService, languageService, pageService, routeService,
+seoTagsService) {
 
    $log.debug( $location.path() +" AppCtrl" );
 
@@ -13,13 +14,16 @@ ajaxService, localStorageService, languageService, pageService, routeService) {
 taatrApp.controller("MainCtrl", function (
 $scope, $location, $route, $log,
 $ocLazyLoad,
-ajaxService, localStorageService, languageService, pageService, routeService) {
+ajaxService, localStorageService, languageService, pageService, routeService,
+seoTagsService) {
+  
 
    $log.debug( $location.path() +" MainCtrl" );
 
    languageService.setup($scope, localStorageService);
 
-   $scope.changelanguage = languageService.change($scope, localStorageService);
+   $scope.changelanguage = languageService.change($scope, localStorageService,
+    seoTagsService);
 
    $scope.getPage = pageService.setup($scope, localStorageService, ajaxService);
 
@@ -27,7 +31,8 @@ ajaxService, localStorageService, languageService, pageService, routeService) {
 
    $scope.routeGoToView = routeService.setup();
  
-   
+   seoTagsService.setup(localStorageService, 'mainPage');
+
    $scope.showMonth = function( obj, month ) {  
         var bool = false;
         if ( +month == 1) {
@@ -71,19 +76,23 @@ bool = index <= 11 ? ( ($scope.first_len <= 11) ?
 
 taatrApp.controller("PerfomanceCtrl", function ($scope, $location, $log,
 $ocLazyLoad,
-ajaxService, localStorageService, languageService, pageService, routeService) {
+ajaxService, localStorageService, languageService, pageService, routeService,
+seoTagsService) {
 
    $log.debug( $location.path() +" PerfomanceCtrl" );
 
    languageService.setup($scope, localStorageService);
 
-   $scope.changelanguage = languageService.change($scope, localStorageService);
+   $scope.changelanguage = languageService.change($scope, localStorageService,
+    seoTagsService);
 
    $scope.getPage = pageService.setup($scope, localStorageService, ajaxService);
 
    $scope.getPage("/content/go2json/perfomance/25", 'perfomancePage');
 
    $scope.routeGoToView = routeService.setup();
+
+   seoTagsService.setup(localStorageService, 'perfomancePage');
 
 
    $scope.test = function(item){
@@ -96,25 +105,23 @@ ajaxService, localStorageService, languageService, pageService, routeService) {
 
 
 
-taatrApp.controller("TestCtrl", function ($scope, $location, $log,
-ajaxService, localStorageService, languageService, pageService, routeService) {
+taatrApp.controller("RepertuarCtrl", function ($scope, $location, $log,
+$ocLazyLoad,
+ajaxService, localStorageService, languageService, pageService, routeService,
+seoTagsService) { 
 
-   $log.debug( $location.path() +" TestCtrl" );
+   $log.debug( $location.path() +" RepertuarCtrl" );
 
    languageService.setup($scope, localStorageService);
 
-   $scope.changelanguage = languageService.change($scope, localStorageService);
+   $scope.changelanguage = languageService.change($scope, localStorageService,
+    seoTagsService);
 
    $scope.getPage = pageService.setup($scope, localStorageService, ajaxService);
 
-   //$scope.getPage("/content/go2json/perfomance/25", 'perfomancePage');
+   $scope.getPage("/content/ru/go2json/frontpage/1", 'mainPage');
 
    $scope.routeGoToView = routeService.setup();
-
-   $scope.test = function(item){
-        console.log( $scope ); 
-        return item;       
-   };
-   $scope.debuger =  $location.path(); 
-
+ 
+   seoTagsService.setup(localStorageService, 'mainPage');
 });

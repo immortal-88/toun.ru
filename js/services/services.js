@@ -46,6 +46,7 @@ customServices.factory('languageService', function () {
             scope.languages['ru'] = 'field_lang_ru';
             scope.languages['mns'] = 'field_lang_mns';
             scope.languages['kh'] = 'field_lang_kh';
+           
             if ( !localStorageService.get('language1') || 
                 !localStorageService.get('language2') ) {
                 localStorageService.set('language1','ru');
@@ -57,7 +58,7 @@ customServices.factory('languageService', function () {
                 scope.language2 = localStorageService.get('language2');
             }        
         },
-        change: function(scope, localStorageService) {
+        change: function(scope, localStorageService, seoTagsService) {
             return function(lang, langcase ){        
                 if( langcase == 1 ) {
                     localStorageService.set('language1',lang);
@@ -66,7 +67,8 @@ customServices.factory('languageService', function () {
                 if( langcase == 2 ) {
                     localStorageService.set('language2',lang);
                     scope.language2 = localStorageService.get('language2');
-                }       
+                }  
+                seoTagsService.setup(localStorageService, 'mainPage');     
             } 
         } 
 
@@ -102,6 +104,31 @@ customServices.factory('routeService', function ($location) {
             return function(path) {
                 $location.path(path);
             }
+        }
+
+    }
+});
+
+
+customServices.factory('seoTagsService', function () {
+    return {
+
+        setup: function(localStorageService, nameOfPage){
+
+var ar = [];
+ar['en'] = 'field_lang_en';
+ar['ru'] = 'field_lang_ru';
+
+var page = localStorageService.get(nameOfPage);
+var lang = localStorageService.get('language1');
+
+
+$( 'title' ).html( page['seo'][ar[lang]]['title'] );
+
+
+$( 'meta[name="description"]' ).attr('description',
+ page['seo'][ar[lang]]['description'] );   
+
         }
 
     }
