@@ -124,4 +124,6 @@ seoTagsService) {
    $scope.routeGoToView = routeService.setup();
  
    seoTagsService.setup(localStorageService, 'mainPage');
+
+   
 });
