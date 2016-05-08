@@ -2,10 +2,7 @@
 
 // controllers
 taatrApp.controller("AppCtrl", function (
-$scope, $location, $route, $log,
-$ocLazyLoad,
-ajaxService, localStorageService, languageService, pageService, routeService,
-seoTagsService) {
+$scope, $location, $log) {
 
    $log.debug( $location.path() +" AppCtrl" );
 
@@ -20,18 +17,17 @@ seoTagsService) {
 
    $log.debug( $location.path() +" MainCtrl" );
 
-   languageService.setup($scope, localStorageService);
+   languageService.setup($scope);
 
-   $scope.changelanguage = languageService.change($scope, localStorageService,
-    seoTagsService);
+   $scope.changelanguage = languageService.change($scope );
 
-   $scope.getPage = pageService.setup($scope, localStorageService, ajaxService);
+   $scope.getPage = pageService.setup($scope);
 
    $scope.getPage("/content/ru/go2json/frontpage/1", 'mainPage');
 
    $scope.routeGoToView = routeService.setup();
  
-   seoTagsService.setup(localStorageService, 'mainPage');
+   seoTagsService.setup( 'mainPage');
 
    $scope.showMonth = function( obj, month ) {  
         var bool = false;
@@ -70,7 +66,7 @@ bool = index <= 11 ? ( ($scope.first_len <= 11) ?
         console.log( item ); 
         return item;       
    };
-   $scope.debuger =  $location.path(); 
+
 
 });
 
@@ -81,25 +77,23 @@ seoTagsService) {
 
    $log.debug( $location.path() +" PerfomanceCtrl" );
 
-   languageService.setup($scope, localStorageService);
+   languageService.setup($scope);
 
-   $scope.changelanguage = languageService.change($scope, localStorageService,
-    seoTagsService);
+   $scope.changelanguage = languageService.change($scope );
 
-   $scope.getPage = pageService.setup($scope, localStorageService, ajaxService);
+   $scope.getPage = pageService.setup($scope);
 
    $scope.getPage("/content/go2json/perfomance/25", 'perfomancePage');
 
    $scope.routeGoToView = routeService.setup();
 
-   seoTagsService.setup(localStorageService, 'perfomancePage');
+   seoTagsService.setup('perfomancePage');
 
 
    $scope.test = function(item){
         console.log( item ); 
         return item;       
    };
-   $scope.debuger =  $location.path(); 
 
 });
 
@@ -112,18 +106,17 @@ seoTagsService) {
 
    $log.debug( $location.path() +" RepertuarCtrl" );
 
-   languageService.setup($scope, localStorageService);
+   languageService.setup($scope);
 
-   $scope.changelanguage = languageService.change($scope, localStorageService,
-    seoTagsService);
+   $scope.changelanguage = languageService.change($scope);
 
-   $scope.getPage = pageService.setup($scope, localStorageService, ajaxService);
+   $scope.getPage = pageService.setup($scope);
 
    $scope.getPage("/content/ru/go2json/frontpage/1", 'mainPage');
 
    $scope.routeGoToView = routeService.setup();
  
-   seoTagsService.setup(localStorageService, 'mainPage');
+   seoTagsService.setup('mainPage');
 
-   
+
 });

@@ -63,19 +63,35 @@ customDirectives.directive('videoSetDir', function () {
         restrict: "A",
         scope : false,
         link: function (scope, element, attr) {
-                element.ready(function () {
+            element.ready(function () {
 
-if(scope['mainPage']) {
+
+                console.log( "before Interval" ); 
+                var intervalID = setInterval(function(){
+console.log( "after Interval" );  
+if(!scope['mainPage']) { return '' }  
+if(!scope['mainPage']) { return '' }                            
+if(!scope['mainPage']['lenta']) { return '' }  
+
+
     var fild = attr['fildname'];
     var id = attr['videoid'];
     var video = document.getElementById(id);
+    if ( video.getAttribute('itisdone') ) { 
+        clearInterval(intervalID) 
+        return '';
+    }
     var source = document.createElement('source');
     source.setAttribute('src', scope['mainPage']['lenta'][fild]);
     video.appendChild(source);
-    video.play();                      
-}
+    video.setAttribute('itisdone', ' true ')
+    console.log( 'before play' );
+    clearInterval(intervalID);    
+    video.play(); 
 
-                });
+
+                }, 500 );
+            });
         }
     }
 });
@@ -88,14 +104,25 @@ customDirectives.directive('imgSetDir', function () {
         link: function (scope, element, attr) {
                 element.ready(function () {
 
-if(scope['mainPage']) {
-    var fild = attr['fildname'];
-    source.setAttribute('src', scope['mainPage']['lenta'][fild]);                     
-}
 
-                });
+                    var intervalID = setInterval(function(){ 
+if(!scope['mainPage']) { return '' }  
+if(!scope['mainPage']) { return '' }                            
+if(!scope['mainPage']['lenta']) { return '' }   
+if( element.attr('src') ) {  
+        clearInterval(intervalID) 
+        return '';
+}
+     
+    var fild = attr['fildname'];
+    element.attr('src', scope['mainPage']['lenta'][fild]);
+    clearInterval(intervalID);
+                    }, 1000 );                     
+
+
+                    });
+                }
         }
-    }
 });
 
 customDirectives.directive('submitDir', function () {

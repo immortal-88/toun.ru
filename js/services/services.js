@@ -38,9 +38,10 @@ customServices.factory('localStorageService', function () {
     }
 });
 
-customServices.factory('languageService', function () {
+customServices.factory('languageService', function (
+    localStorageService, seoTagsService) {
     return {
-        setup: function(scope, localStorageService) {
+        setup: function(scope) {
             scope.languages = [];
             scope.languages['en'] = 'field_lang_en';
             scope.languages['ru'] = 'field_lang_ru';
@@ -58,7 +59,7 @@ customServices.factory('languageService', function () {
                 scope.language2 = localStorageService.get('language2');
             }        
         },
-        change: function(scope, localStorageService, seoTagsService) {
+        change: function(scope) {
             return function(lang, langcase ){        
                 if( langcase == 1 ) {
                     localStorageService.set('language1',lang);
@@ -75,10 +76,11 @@ customServices.factory('languageService', function () {
     }
 });
 
-customServices.factory('pageService', function () {
+customServices.factory('pageService', function (
+    localStorageService, ajaxService) {
     return {
 
-        setup: function(scope, localStorageService, ajaxService){
+        setup: function(scope){
             return function(json, nameOfPage) {
                 if ( localStorageService.get(nameOfPage) ) {
                     scope[nameOfPage] = localStorageService.get(nameOfPage); 
@@ -110,27 +112,26 @@ customServices.factory('routeService', function ($location) {
 });
 
 
-customServices.factory('seoTagsService', function () {
+customServices.factory('seoTagsService', function (localStorageService) {
     return {
 
-        setup: function(localStorageService, nameOfPage){
+        setup: function(nameOfPage){
 
 var ar = [];
 ar['en'] = 'field_lang_en';
 ar['ru'] = 'field_lang_ru';
 
 var page = localStorageService.get(nameOfPage);
+if ( ! page ) { return false }
 var lang = localStorageService.get('language1');
-console.log( page );
+if ( ! lang ) { return false }
 
-if ( page ) {
+if ( ! page['seo'] ) { return false }    
 
     $( 'title' ).html( page['seo'][ar[lang]]['title'] );
-
-
     $( 'meta[name="description"]' ).attr('description',
     page['seo'][ar[lang]]['description'] );   
-}
+
         }
 
     }
