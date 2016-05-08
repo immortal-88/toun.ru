@@ -66,10 +66,8 @@ customDirectives.directive('videoSetDir', function () {
             element.ready(function () {
 
 
-                console.log( "before Interval" ); 
-                var intervalID = setInterval(function(){
-console.log( "after Interval" );  
-if(!scope['mainPage']) { return '' }  
+
+                var intervalID = setInterval(function(){ 
 if(!scope['mainPage']) { return '' }                            
 if(!scope['mainPage']['lenta']) { return '' }  
 
@@ -85,7 +83,6 @@ if(!scope['mainPage']['lenta']) { return '' }
     source.setAttribute('src', scope['mainPage']['lenta'][fild]);
     video.appendChild(source);
     video.setAttribute('itisdone', ' true ')
-    console.log( 'before play' );
     clearInterval(intervalID);    
     video.play(); 
 
@@ -106,8 +103,7 @@ customDirectives.directive('imgSetDir', function () {
 
 
                     var intervalID = setInterval(function(){ 
-if(!scope['mainPage']) { return '' }  
-if(!scope['mainPage']) { return '' }                            
+if(!scope['mainPage']) { return '' }                         
 if(!scope['mainPage']['lenta']) { return '' }   
 if( element.attr('src') ) {  
         clearInterval(intervalID) 
